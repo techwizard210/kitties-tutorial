@@ -10,33 +10,33 @@ pub struct Cli {
 }
 
 #[derive(Debug, clap::Subcommand)]
-// pub enum Subcommand {
-// 	/// Key management cli utilities
-// 	#[clap(subcommand)]
-// 	Key(sc_cli::KeySubcommand),
+pub enum Subcommand {
+	/// Key management cli utilities
+	#[clap(subcommand)]
+	Key(sc_cli::KeySubcommand),
 
-// 	/// Build a chain specification.
-// 	BuildSpec(sc_cli::BuildSpecCmd),
+	/// Build a chain specification.
+	BuildSpec(sc_cli::BuildSpecCmd),
 
-// 	/// Validate blocks.
-// 	CheckBlock(sc_cli::CheckBlockCmd),
+	/// Validate blocks.
+	CheckBlock(sc_cli::CheckBlockCmd),
 
-// 	/// Export blocks.
-// 	ExportBlocks(sc_cli::ExportBlocksCmd),
+	/// Export blocks.
+	ExportBlocks(sc_cli::ExportBlocksCmd),
 
-// 	/// Export the state of a given block into a chain spec.
-// 	ExportState(sc_cli::ExportStateCmd),
+	/// Export the state of a given block into a chain spec.
+	ExportState(sc_cli::ExportStateCmd),
 
-// 	/// Import blocks.
-// 	ImportBlocks(sc_cli::ImportBlocksCmd),
+	/// Import blocks.
+	ImportBlocks(sc_cli::ImportBlocksCmd),
 
-// 	/// Remove the whole chain.
-// 	PurgeChain(sc_cli::PurgeChainCmd),
+	/// Remove the whole chain.
+	PurgeChain(sc_cli::PurgeChainCmd),
 
-// 	/// Revert the chain to a previous state.
-// 	Revert(sc_cli::RevertCmd),
+	/// Revert the chain to a previous state.
+	Revert(sc_cli::RevertCmd),
 
-// 	/// The custom benchmark subcommand benchmarking runtime pallets.
-// 	#[clap(name = "benchmark", about = "Benchmark runtime pallets.")]
-// 	Benchmark(frame_benchmarking_cli::BenchmarkCmd),
-// }
+	/// The custom benchmark subcommand benchmarking runtime pallets.
+	#[clap(name = "benchmark", about = "Benchmark runtime pallets.")]
+	Benchmark(frame_benchmarking_cli::BenchmarkCmd),
+}
