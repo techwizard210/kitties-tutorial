@@ -3,34 +3,34 @@
 pub use pallet::*;
 
 #[frame_support::pallet]
-// pub mod pallet {
-// 	use frame_support::pallet_prelude::*;
-// 	use frame_system::pallet_prelude::*;
-// 	use frame_support::{
-// 		sp_runtime::traits::Hash,
-// 		traits::{ Randomness, Currency, tokens::ExistenceRequirement },
-// 		transactional
-// 	};
-// 	use sp_io::hashing::blake2_128;
-// 	use scale_info::TypeInfo;
+pub mod pallet {
+	use frame_support::pallet_prelude::*;
+	use frame_system::pallet_prelude::*;
+	use frame_support::{
+		sp_runtime::traits::Hash,
+		traits::{ Randomness, Currency, tokens::ExistenceRequirement },
+		transactional
+	};
+	use sp_io::hashing::blake2_128;
+	use scale_info::TypeInfo;
 
-// 	#[cfg(feature = "std")]
-// 	use frame_support::serde::{Deserialize, Serialize};
+	#[cfg(feature = "std")]
+	use frame_support::serde::{Deserialize, Serialize};
 
-// 	type AccountOf<T> = <T as frame_system::Config>::AccountId;
-// 	type BalanceOf<T> =
-// 		<<T as Config>::Currency as Currency<<T as frame_system::Config>::AccountId>>::Balance;
+	type AccountOf<T> = <T as frame_system::Config>::AccountId;
+	type BalanceOf<T> =
+		<<T as Config>::Currency as Currency<<T as frame_system::Config>::AccountId>>::Balance;
 
-// 	// Struct for holding Kitty information.
-// 	#[derive(Clone, Encode, Decode, PartialEq, RuntimeDebug, TypeInfo, MaxEncodedLen)]
-// 	#[scale_info(skip_type_params(T))]
-// 	#[codec(mel_bound())]
-// 	pub struct Kitty<T: Config> {
-// 		pub dna: [u8; 16],   // Using 16 bytes to represent a kitty DNA
-// 		pub price: Option<BalanceOf<T>>,
-// 		pub gender: Gender,
-// 		pub owner: AccountOf<T>,
-// 	}
+	// Struct for holding Kitty information.
+	#[derive(Clone, Encode, Decode, PartialEq, RuntimeDebug, TypeInfo, MaxEncodedLen)]
+	#[scale_info(skip_type_params(T))]
+	#[codec(mel_bound())]
+	pub struct Kitty<T: Config> {
+		pub dna: [u8; 16],   // Using 16 bytes to represent a kitty DNA
+		pub price: Option<BalanceOf<T>>,
+		pub gender: Gender,
+		pub owner: AccountOf<T>,
+	}
 
 // 	// Enum declaration for Gender.
 // 	#[derive(Clone, Encode, Decode, PartialEq, RuntimeDebug, TypeInfo, MaxEncodedLen)]
