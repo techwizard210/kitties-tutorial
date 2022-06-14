@@ -1,13 +1,13 @@
-use sc_cli::RunCmd;
+// use sc_cli::RunCmd;
 
-#[derive(Debug, clap::Parser)]
-pub struct Cli {
-	#[clap(subcommand)]
-	pub subcommand: Option<Subcommand>,
+// #[derive(Debug, clap::Parser)]
+// pub struct Cli {
+// 	#[clap(subcommand)]
+// 	pub subcommand: Option<Subcommand>,
 
-	#[clap(flatten)]
-	pub run: RunCmd,
-}
+// 	#[clap(flatten)]
+// 	pub run: RunCmd,
+// }
 
 #[derive(Debug, clap::Subcommand)]
 pub enum Subcommand {
